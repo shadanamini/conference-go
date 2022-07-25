@@ -29,7 +29,7 @@ class LocationDetailEncoder(ModelEncoder):
 
 class ConferenceListEncoder(ModelEncoder):
     model = Conference
-    properties = ["name"]
+    properties = ["name", "id"]
 
 
 class ConferenceDetailEncoder(ModelEncoder):
@@ -58,7 +58,6 @@ def api_list_states(request):
             pair = {"name": state.name, "abbreviation": state.abbreviation}
             state_list.append(pair)
         return JsonResponse({"states": state_list})
-
 
 @require_http_methods(["GET", "POST"])
 def api_list_conferences(request):
