@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       const json = JSON.stringify(Object.fromEntries(formData));
   
       const conferenceId = selectTag.options[selectTag.selectedIndex].value;
-      const locationUrl = `http://localhost:8000/api/conferences/${conferenceId}/presentations/`;
+      const locationUrl = 'http://localhost:8000/api/conferences/${conferenceId}/presentations/';
       const fetchConfig = {
         method: "post",
         body: json,
