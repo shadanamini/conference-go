@@ -1,52 +1,73 @@
-import { NavLink } from "react-router-dom"
-function Nav() {
+import { NavLink } from 'react-router-dom';
+import { menuItems } from './menuItems';
+import MenuItems from './MenuItem'
 
-    return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+function Nav() {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-success">
       <div className="container-fluid">
-        <NavLink className="navbar-brand" to="">Conference GO!</NavLink>
+        <NavLink className="navbar-brand" to="/">Conference GO</NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="menus">
+          {menuItems.map((menu, index) => {
+            return <MenuItems items={menu} key={index} />
+          })}
+
+
+
             {/* <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="http://localhost:3000/index.html">Home</NavLink>
-            </li> */}
-            {/* <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="">3001 Home</NavLink>
-            </li> */}
-            <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="locations/new">New Location</NavLink>
+                <NavLink className="nav-link active" aria-current="page" to="">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="conferences/new">New Conference</NavLink>
+                <NavLink className="nav-link" aria-current="page" to="manufacturers">Manufacturers</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="presentations/new">New Presentation</NavLink>
+                <NavLink className="nav-link" aria-current="page" to="manufacturers/new">New Manufacture</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="attendees">List Attendees</NavLink>
+                <NavLink className="nav-link" aria-current="page" to="models">Vehicle Models</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="conferences">List Conferences</NavLink>
+                <NavLink className="nav-link" aria-current="page" to="models/new">New Vehicle Model</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="locations">List Locations</NavLink>
+                <NavLink className="nav-link" aria-current="page" to="automobiles">Automobiles</NavLink>
             </li>
-            {/* <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="attendees/new">Attend Conference</NavLink>
+            <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="automobiles/new">New Automobile</NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="technicians/new">New Technician</NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="sales_persons/new">New Sales Person</NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="potential_customers/new">New Potential Customer</NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="appointments/new">New Appointment</NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="appointments">Appointments</NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="appointments/history">Service History</NavLink>
+                <NavLink className="nav-link" aria-current="page" to="sales">Sales List</NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink className="nav-link" aria-current="page" to="sales/new">Create Sales Record</NavLink>
             </li> */}
           </ul>
-          <form className="d-flex">
-            <NavLink className="btn btn-primary" to="attendees/new">Attend!</NavLink>
-          </form>
+          
         </div>
       </div>
     </nav>
-    );
+  )
 }
 
-export default Nav; 
-
+export default Nav;
 
