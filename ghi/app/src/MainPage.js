@@ -101,12 +101,12 @@ class MainPage extends React.Component {
               virtual conference for thousands of attendees and presenters.
             </p>
             <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <Link to="/attendees/new" className="btn btn-primary btn-lg px-4 gap-3">Attend a conference</Link>
+              <Link to="/attendees/new" className="btn btn-primary btn-lg px-4 gap-3">Attend Conference!</Link>
             </div>
           </div>
         </div>
         <div className="container">
-          <h2>Upcoming conferences</h2>
+          <h2>Upcoming Conferences</h2>
           <div className="row">
             {this.state.conferenceColumns.map((conferenceList, index) => {
               return (

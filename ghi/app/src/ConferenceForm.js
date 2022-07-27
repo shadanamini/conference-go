@@ -99,7 +99,7 @@ class ConferenceForm extends React.Component {
         <div className="row">
             <div className="offset-3 col-6">
                 <div className="shadow p-4 mt-4">
-                    <h1>Create a new conference</h1>
+                    <h1>Create New Conference</h1>
                     <form onSubmit = {this.handleSubmit} id="create-conference-form">
                     <div className="form-floating mb-3">
                         <input onChange={this.handleNameChange} value={this.state.name} placeholder="Name" required type="text" name = "name" id="name" className="form-control" />
@@ -119,15 +119,15 @@ class ConferenceForm extends React.Component {
                     </div>
                     <div className="form-floating mb-3">
                         <input onChange={this.handleMaximumPresentationsChange} value={this.state.maximumPresentations} placeholder="Maximum presentations" required type="number" name = "max_presentations" id="max_presentations" className="form-control" />
-                        <label htmlFor="room_count">Maximum presentations</label>
+                        <label htmlFor="room_count">Maximum Presentations</label>
                     </div>
                     <div className="form-floating mb-3">
                         <input onChange={this.handleMaximumAttendeesChange} value={this.state.maximumAttendees} placeholder="Maximum attendees" required type="number" name = "max_attendees" id="max_attendees" className="form-control" />
-                        <label htmlFor="room_count">Maximum attendees</label>
+                        <label htmlFor="room_count">Maximum Attendees</label>
                     </div>
                     <div className="mb-3">
                         <select onChange={this.handleLocationChange} value={this.state.location} required id="location" className="form-select" name="location">
-                            <option value="">Choose a location</option>
+                            <option value="">Choose Location</option>
                             {this.state.locations.map(location => {
                                 return (
                                     <option key = {location.id} value = {location.id}>
@@ -137,7 +137,7 @@ class ConferenceForm extends React.Component {
                             })}
                         </select>
                     </div>
-                    <button className="btn btn-primary">Create</button>
+                    <button className="btn btn-primary">Create!</button>
                     </form>
                 </div>
             </div>

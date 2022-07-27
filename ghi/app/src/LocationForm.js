@@ -77,7 +77,7 @@ class LocationForm extends React.Component {
             <div className="row">
                 <div className="offset-3 col-6">
                     <div className="shadow p-4 mt-4">
-                        <h1>Create a new location</h1>
+                        <h1>Create New Location</h1>
                         <form onSubmit={this.handleSubmit} id="create-location-form">
                             <div className="form-floating mb-3">
                                 <input onChange={this.handleNameChange} value={this.state.name} placeholder="Name" required type="text" name = "name" id="name" className="form-control" />
@@ -85,7 +85,7 @@ class LocationForm extends React.Component {
                             </div>
                             <div className="form-floating mb-3">
                                 <input onChange={this.handleRoomCountChange} value={this.state.roomCount} placeholder="Room count" required type="number" name ="room_count" id="room_count" className="form-control" />
-                                <label htmlFor="room_count">Room count</label>
+                                <label htmlFor="room_count">Room Count</label>
                             </div>
                             <div className="form-floating mb-3">
                                 <input onChange={this.handleCityChange} value={this.state.city} placeholder="City" required type="text" name = "city" id="city" className="form-control" />
@@ -93,7 +93,7 @@ class LocationForm extends React.Component {
                             </div>
                             <div className="mb-3">
                                 <select onChange={this.handleStateChange} value={this.state.state} required id="state" name = "state" className="form-select">
-                                <option value="">Choose a state</option>
+                                <option value="">Choose State</option>
                                 {this.state.states.map(state => {
                                     return (
                                         <option value={state.abbreviation} key={state.abbreviation}>
@@ -103,7 +103,7 @@ class LocationForm extends React.Component {
                                 })}
                                 </select>
                             </div>
-                            <button className="btn btn-primary">Create</button>
+                            <button className="btn btn-primary">Create!</button>
                         </form>
                     </div>
                 </div>

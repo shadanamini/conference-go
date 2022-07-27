@@ -103,19 +103,19 @@ class PresentationForm extends React.Component {
         <div className="row">
         <div className="offset-3 col-6">
           <div className="shadow p-4 mt-4">
-            <h1>Create a new presentation</h1>
+            <h1>Create New Presentation</h1>
             <form onSubmit={this.handleSubmit} id="create-presentation-form">
               <div className="form-floating mb-3">
                 <input value={this.state.presenterName} onChange={this.handlePresenterNameChange} placeholder="Presenter name" required type="text" name="presenter_name" id="presenter_name" className="form-control" />
-                <label htmlFor="presenter_name">Presenter name</label>
+                <label htmlFor="presenter_name">Presenter Name</label>
               </div>
               <div className="form-floating mb-3">
                 <input value={this.state.presenterEmail} onChange={this.handlePresenterEmailChange} placeholder="Presenter email" required type="email" name="presenter_email" id="presenter_email" className="form-control" />
-                <label htmlFor="presenter_email">Presenter email</label>
+                <label htmlFor="presenter_email">Presenter Email</label>
               </div>
               <div className="form-floating mb-3">
                 <input value={this.state.companyName} onChange={this.handleCompanyNameChange} placeholder="Company name" type="text" name="company_name" id="company_name" className="form-control" />
-                <label htmlFor="company_name">Company name</label>
+                <label htmlFor="company_name">Company Name</label>
               </div>
               <div className="form-floating mb-3">
                 <input value={this.state.title} onChange={this.handleTitleChange} placeholder="Title" required type="text" name="title" id="title" className="form-control" />
@@ -127,7 +127,7 @@ class PresentationForm extends React.Component {
               </div>
               <div className="mb-3">
                 <select value={this.state.conference} onChange={this.handleConferenceChange} required name="conference" id="conference" className="form-select">
-                  <option value="">Choose a conference</option>
+                  <option value="">Choose Conference</option>
                   {this.state.conferences.map(conference => {
                       return (
                           <option value={conference.href} key={conference.href}>
@@ -137,7 +137,7 @@ class PresentationForm extends React.Component {
                   })}
                 </select>
               </div>
-              <button className="btn btn-primary">Create</button>
+              <button className="btn btn-primary">Create!</button>
             </form>
           </div>
         </div>

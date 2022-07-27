@@ -99,7 +99,7 @@ class AttendeeForm extends React.Component {
                     </div>
                     <div className="mb-3">
                         <select onChange={this.handleConferenceChange} value={this.state.conference} name="conference" id="conference" className={dropdownClasses} required>
-                        <option value="">Choose a conference</option>
+                        <option value="">Choose Your Conference</option>
                         {this.state.conferences.map(conference => {
                             return (
                                 <option key={conference.href} value={conference.href}>
@@ -114,19 +114,19 @@ class AttendeeForm extends React.Component {
                     </p>
                     <div className="row">
                         <div className="col">
-                        <div className="form-floating mb-3">
+                        <div className="form-floating mb-1">
                             <input onChange={this.handleNameChange} value={this.state.name} required placeholder="Your full name" type="text" id="name" name="name" className="form-control" />
-                            <label htmlFor="name">Your full name</label>
+                            <label htmlFor="name">Enter Your Full Name</label>
                         </div>
                         </div>
                         <div className="col">
-                        <div className="form-floating mb-3">
+                        <div className="form-floating mb-1">
                             <input onChange={this.handleEmailChange} value={this.state.email} required placeholder="Your email address" type="email" id="email" name="email" className="form-control" />
-                            <label htmlFor="email">Your email address</label>
+                            <label htmlFor="email">Enter Your Email Address</label>
                         </div>
                         </div>
                     </div>
-                    <button className="btn btn-lg btn-primary">I'm going!</button>
+                    <button className="btn btn-mb btn-primary">Attend Conference!</button>
                     </form>
                     <div className="alert alert-success d-none mb-0" id="success-message">
                     Congratulations! You're all signed up!
