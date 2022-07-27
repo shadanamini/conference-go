@@ -82,16 +82,21 @@ class AttendeeForm extends React.Component {
             <div className="row">
             <div className="col col-sm-auto">
                 <img width="300" className="bg-white rounded shadow d-block mx-auto mb-4" src="/logo.svg" />
+                {/* <style>{"body { background-color: #0dcaf0; }"}</style> */}
             </div>
             <div className="col">
                 <div className="card shadow">
                 <div className="card-body">
                     <form onSubmit={this.handleSubmit} id="create-attendee-form">
-                    <h1 className="card-title">It's Conference Time!</h1>
+                    <div class="col-md-12 text-center">
+                        <h1 className="card-title">It's Conference Time!</h1>
+                    </div>
+                    <div class="col-md-12 text-center">
                     <p className="mb-3">
                         Please choose which conference
                         you'd like to attend.
                     </p>
+                    </div>
                     <div className={spinnerClasses} id="loading-conference-spinner">
                         <div className="spinner-grow text-secondary" role="status">
                         <span className="visually-hidden">Loading...</span>
@@ -109,24 +114,23 @@ class AttendeeForm extends React.Component {
                         })}
                         </select>
                     </div>
-                    <p className="mb-3">
-                        Now, tell us about yourself.
-                    </p>
                     <div className="row">
                         <div className="col">
-                        <div className="form-floating mb-1">
+                        <div className="form-floating mb-3">
                             <input onChange={this.handleNameChange} value={this.state.name} required placeholder="Your full name" type="text" id="name" name="name" className="form-control" />
                             <label htmlFor="name">Enter Your Full Name</label>
                         </div>
                         </div>
                         <div className="col">
-                        <div className="form-floating mb-1">
+                        <div className="form-floating mb-3">
                             <input onChange={this.handleEmailChange} value={this.state.email} required placeholder="Your email address" type="email" id="email" name="email" className="form-control" />
                             <label htmlFor="email">Enter Your Email Address</label>
                         </div>
                         </div>
                     </div>
-                    <button className="btn btn-mb btn-primary">Attend Conference!</button>
+                    <div class="col-md-12 text-center">
+                    <button className="btn btn-mb btn-primary">Attend!</button>
+                    </div>
                     </form>
                     <div className="alert alert-success d-none mb-0" id="success-message">
                     Congratulations! You're all signed up!

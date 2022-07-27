@@ -97,9 +97,12 @@ class ConferenceForm extends React.Component {
   render() {
     return (
         <div className="row">
-            <div className="offset-3 col-6">
-                <div className="shadow p-4 mt-4">
+            <div className="offset-3 col-5 bg-white">
+            {/* <style>{"body { background-color: #0dcaf0; }"}</style> */}
+                <div className="p-4 mt-4">
+                <div class="col-md-12 text-center">
                     <h1>Create New Conference</h1>
+                </div>
                     <form onSubmit = {this.handleSubmit} id="create-conference-form">
                     <div className="form-floating mb-3">
                         <input onChange={this.handleNameChange} value={this.state.name} placeholder="Name" required type="text" name = "name" id="name" className="form-control" />
@@ -137,7 +140,9 @@ class ConferenceForm extends React.Component {
                             })}
                         </select>
                     </div>
-                    <button className="btn btn-primary">Create!</button>
+                    <div class="col-md-12 text-center">
+                        <button className="btn btn-primary">Create!</button>
+                    </div>
                     </form>
                 </div>
             </div>

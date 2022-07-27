@@ -101,9 +101,12 @@ class PresentationForm extends React.Component {
   render() {
     return (
         <div className="row">
-        <div className="offset-3 col-6">
-          <div className="shadow p-4 mt-4">
+        <div className="offset-3 col-5 bg-white">
+        {/* <style>{"body { background-color: #0dcaf0; }"}</style> */}
+          <div className="p-4 mt-4">
+          <div class="col-md-12 text-center">
             <h1>Create New Presentation</h1>
+          </div>
             <form onSubmit={this.handleSubmit} id="create-presentation-form">
               <div className="form-floating mb-3">
                 <input value={this.state.presenterName} onChange={this.handlePresenterNameChange} placeholder="Presenter name" required type="text" name="presenter_name" id="presenter_name" className="form-control" />
@@ -137,7 +140,9 @@ class PresentationForm extends React.Component {
                   })}
                 </select>
               </div>
-              <button className="btn btn-primary">Create!</button>
+              <div class="col-md-12 text-center">
+                <button className="btn btn-primary">Create!</button>
+              </div>
             </form>
           </div>
         </div>
