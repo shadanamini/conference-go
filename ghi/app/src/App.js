@@ -7,6 +7,7 @@ import AttendeeForm from './AttendeeForm';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PresentationForm from './PresentationForm';
 import MainPage from './MainPage';
+import ListConferences from './ListConferences';
 
 
 
@@ -25,6 +26,7 @@ function App(props) {
           <Route path="/attendees/new" element={<AttendeeForm />} />
           <Route path="/locations/new" element={<LocationForm />} />
           <Route path="/presentations/new" element={<PresentationForm />} />
+          <Route path="/conferences" element={<ListConferences conferences = {props.conferences} /> } />
           <Route path="/attendees" element={<AttendeesList attendees = {props.attendees} /> } />
         </Routes>
       </div>

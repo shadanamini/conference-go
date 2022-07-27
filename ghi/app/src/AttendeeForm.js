@@ -81,7 +81,7 @@ class AttendeeForm extends React.Component {
             <div className="my-5">
             <div className="row">
             <div className="col col-sm-auto">
-            <style>{"body { background-color: #0dcaf0; }"}</style>
+            {/* <style>{"body { background-color: #0dcaf0; }"}</style> */}
                 <img width="300" className="bg-white rounded shadow d-block mx-auto mb-4" src="/logo.svg" />
             </div>
             <div className="col">

@@ -27,3 +27,19 @@ else {
   console.error(response);
 }};
 loadAttendees();
+
+async function loadConferences() {
+  const response = await fetch("http://localhost:8000/api/conferences/");
+  if(response.ok) {
+     const data = await response.json();
+     root.render(
+       <React.StrictMode>
+         <App conferences={data.conferences} />
+       </React.StrictMode>
+     );
+    }
+  else {
+    console.error(response);
+  }};
+  loadConferences();
+  
