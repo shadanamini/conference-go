@@ -43,3 +43,17 @@ async function loadConferences() {
   }};
   loadConferences();
   
+  async function loadLocations() {
+    const response = await fetch("http://localhost:8000/api/locations/");
+    if(response.ok) {
+       const data = await response.json();
+       root.render(
+         <React.StrictMode>
+           <App locations={data.locations} />
+         </React.StrictMode>
+       );
+      }
+    else {
+      console.error(response);
+    }};
+    loadLocations();

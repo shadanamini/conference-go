@@ -26,10 +26,13 @@ function Nav() {
               <NavLink className="nav-link" aria-current="page" to="presentations/new">New Presentation</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="attendees">Attendees List</NavLink>
+              <NavLink className="nav-link" aria-current="page" to="attendees">List Attendees</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="conferences/">Conference List</NavLink>
+              <NavLink className="nav-link" aria-current="page" to="conferences">List Conferences</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="locations">List Locations</NavLink>
             </li>
             {/* <li className="nav-item">
               <NavLink className="nav-link" aria-current="page" to="attendees/new">Attend Conference</NavLink>
