@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Nav from './Nav';
+import AttendeesList from './AttendeesList';
+import LocationForm from './LocationForm';
+import ConferenceForm from './ConferenceForm';
+import AttendeeForm from './AttendeeForm';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import PresentationForm from './PresentationForm';
+import MainPage from './MainPage';
 
-function App() {
+
+
+
+function App(props) {
+  if(props.attendees === undefined){
+    return null;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Nav />
+      <div className="container">
+        <Routes>
+          <Route index element={<MainPage />} />
+          <Route path="/conferences/new" element={<ConferenceForm />} />
+          <Route path="/attendees/new" element={<AttendeeForm />} />
+          <Route path="/locations/new" element={<LocationForm />} />
+          <Route path="/presentations/new" element={<PresentationForm />} />
+          <Route path="/attendees" element={<AttendeesList attendees = {props.attendees} /> } />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
