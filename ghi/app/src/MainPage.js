@@ -93,7 +93,7 @@ class MainPage extends React.Component {
     return (
       <div className="my-5 container">
         <div className="px-4 py-5 my-5 mt-0 text-center bg-white">
-          {/* <img className="bg-white rounded shadow d-block mx-auto mb-4" src="/logo.svg" alt="" width="600" /> */}
+          <img className="bg-white rounded shadow d-block mx-auto mb-4" src="/logo.svg" alt="" width="600" />
           <h1 className="display-5 fw-bold">Conference GO!</h1>
           <div className="col-lg-6 mx-auto">
             <p className="lead mb-4">

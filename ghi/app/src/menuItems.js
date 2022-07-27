@@ -47,7 +47,7 @@ export const menuItems=[
             },
             {
                 title: "Attendees List",
-                href: "attendees/",
+                href: "/attendees",
             }
         ]
     }
