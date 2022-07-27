@@ -81,8 +81,8 @@ class AttendeeForm extends React.Component {
             <div className="my-5">
             <div className="row">
             <div className="col col-sm-auto">
+            <style>{"body { background-color: #0dcaf0; }"}</style>
                 <img width="300" className="bg-white rounded shadow d-block mx-auto mb-4" src="/logo.svg" />
-                {/* <style>{"body { background-color: #0dcaf0; }"}</style> */}
             </div>
             <div className="col">
                 <div className="card shadow">
@@ -102,7 +102,7 @@ class AttendeeForm extends React.Component {
                         <span className="visually-hidden">Loading...</span>
                         </div>
                     </div>
-                    <div className="mb-3">
+                    <div className="form mb-3">
                         <select onChange={this.handleConferenceChange} value={this.state.conference} name="conference" id="conference" className={dropdownClasses} required>
                         <option value="">Choose Your Conference</option>
                         {this.state.conferences.map(conference => {
