@@ -10,6 +10,7 @@ function ListLocations(props) {
                     <th>Room Count</th>
                     <th>City</th>
                     <th>State</th>
+                    <th>Created</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -20,6 +21,7 @@ function ListLocations(props) {
                         <td>{ location.room_count }</td>
                         <td>{ location.city }</td>
                         <td>{ location.state }</td>
+                        <td>{ location.created }</td>
                     </tr>
                 );           
             })}

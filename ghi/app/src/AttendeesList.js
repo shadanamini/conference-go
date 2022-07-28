@@ -10,7 +10,9 @@ function AttendeesList(props) {
             <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Email</th>
                     <th>Conference</th>
+                    <th>Created</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -18,7 +20,9 @@ function AttendeesList(props) {
                     return (
                     <tr key={attendee.href}>
                         <td>{ attendee.name }</td>
+                        <td>{ attendee.email }</td>
                         <td>{ attendee.conference }</td>
+                        <td>{ attendee.created }</td>
                     </tr>
                 );           
             })}
