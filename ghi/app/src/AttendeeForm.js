@@ -6,11 +6,13 @@ class AttendeeForm extends React.Component {
         this.state= {
             name: '',
             email: '',
-            conferences: []
+            conferences: [],
+            successfulSubmit: false,
         };
         this.handleConferenceChange = this.handleConferenceChange.bind(this);
         this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
+        this.handleSuccessMessageChange = this.handleSuccessMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -19,7 +21,7 @@ class AttendeeForm extends React.Component {
         const data = {...this.state};
         delete data.conferences;
         console.log(data);
-
+        delete data.successfulSubmit
         const attendeeUrl = "http://localhost:8001/api/attendees/";
         const fetchConfig = {
             method: "post",
@@ -37,6 +39,7 @@ class AttendeeForm extends React.Component {
                 name: '',
                 email: '',
                 conference: '',
+                successfulSubmit: true,
             }
             this.setState(cleared);
         }
@@ -53,6 +56,11 @@ class AttendeeForm extends React.Component {
     }
 
     handleConferenceChange(event) {
+        const value = event.target.value;
+        this.setState({conference: value})
+    }
+
+    handleSuccessMessageChange(event) {
         const value = event.target.value;
         this.setState({conference: value})
     }
@@ -76,6 +84,13 @@ class AttendeeForm extends React.Component {
             spinnerClasses = 'd-flex justify-content-center mb-3 d-none'
             dropdownClasses = 'form-select';
         }
+
+        let successMessage = 'alert alert-success d-none mb-0'
+        let formClass = ''
+        if (this.state.successfulSubmit) {
+            successMessage = 'alert alert-success mb-0'
+            formClass = 'd-none';
+        }
         
         return (
             <div className="my-5">
@@ -87,7 +102,7 @@ class AttendeeForm extends React.Component {
             <div className="col">
                 <div className="card shadow">
                 <div className="card-body">
-                    <form onSubmit={this.handleSubmit} id="create-attendee-form">
+                    <form className={formClass} onSubmit={this.handleSubmit} id="create-attendee-form">
                     <div class="col-md-12 text-center">
                         <h1 className="card-title">It's Conference Time!</h1>
                     </div>
@@ -132,7 +147,7 @@ class AttendeeForm extends React.Component {
                     <button className="btn btn-mb btn-primary">Attend!</button>
                     </div>
                     </form>
-                    <div className="alert alert-success d-none mb-0" id="success-message">
+                    <div className={successMessage}id="success-message">
                     Congratulations! You're all signed up!
                     </div>
                 </div>
