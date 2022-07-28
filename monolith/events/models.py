@@ -84,3 +84,8 @@ class Conference(models.Model):
     class Meta:
         ordering = ("starts", "name")  # Default ordering for Conference
         
+    def get_date(self):
+        return self.starts.date()
+
+    def get_date_also(self):
+        return self.ends.date()
