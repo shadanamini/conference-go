@@ -13,7 +13,7 @@ class ConferenceVODetailEncoder(ModelEncoder):
 
 class AttendeeListEncoder(ModelEncoder):
     model = Attendee
-    properties = ["name"]
+    properties = ["name", "email", "created"]
 
     def get_extra_data(self, o):
         return {"conference": o.conference.name}

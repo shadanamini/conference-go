@@ -13,7 +13,7 @@ class LocationNameEncoder(ModelEncoder):
 
 class LocationListEncoder(ModelEncoder):
     model = Location
-    properties = ["name", "room_count", "city", "picture_url", "id"]
+    properties = ["name", "room_count", "city", "picture_url", "id", "created"]
 
     def get_extra_data(self, o):
         return {"state": o.state.abbreviation} 
@@ -35,7 +35,7 @@ class LocationDetailEncoder(ModelEncoder):
 
 class ConferenceListEncoder(ModelEncoder):
     model = Conference
-    properties = ["name", "starts", "ends","max_presentations", "max_attendees", "location"]
+    properties = ["name", "starts", "ends", "max_presentations", "max_attendees", "location"]
     
     def get_extra_data(self, o):
         return {"location": o.location.name}
