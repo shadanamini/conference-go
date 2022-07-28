@@ -61,8 +61,8 @@ class Conference(models.Model):
     # Has a one-to-many relationship with attendees.Attendee
 
     name = models.CharField(max_length=200)
-    starts = models.DateTimeField()
-    ends = models.DateTimeField()
+    starts = models.DateField()
+    ends = models.DateField()
     description = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
