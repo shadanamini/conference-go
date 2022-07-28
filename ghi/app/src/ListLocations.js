@@ -1,6 +1,7 @@
 import React from 'react'
 
 function ListLocations(props) {
+    console.log('here', props);
     return (
         <table className="table table-striped">
             <thead>

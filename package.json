@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "asyncawait": "^3.0.0"
+  }
+}
