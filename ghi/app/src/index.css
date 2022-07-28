@@ -73,7 +73,9 @@ code {
 
 .menu-items a{
   display: block;
+  align-items: center;
   font-size: inherit;
+  justify-content: center;
   color: black;
   text-decoration: none;
 }
