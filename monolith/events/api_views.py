@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 import json
@@ -6,6 +7,9 @@ from common.json import ModelEncoder
 from .acls import get_photo, get_weather_data
 from .models import Conference, Location, State
 
+class LocationNameEncoder(ModelEncoder):
+    model = Location
+    properties = ["name"]
 
 class LocationListEncoder(ModelEncoder):
     model = Location
@@ -31,7 +35,10 @@ class LocationDetailEncoder(ModelEncoder):
 
 class ConferenceListEncoder(ModelEncoder):
     model = Conference
-    properties = ["name"]
+    properties = ["name", "starts", "ends","max_presentations", "max_attendees", "location"]
+    
+    def get_extra_data(self, o):
+        return {"location": o.location.name}
 
 
 class ConferenceDetailEncoder(ModelEncoder):

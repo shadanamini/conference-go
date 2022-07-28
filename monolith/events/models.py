@@ -83,3 +83,4 @@ class Conference(models.Model):
 
     class Meta:
         ordering = ("starts", "name")  # Default ordering for Conference
+        

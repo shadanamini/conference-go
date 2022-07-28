@@ -9,6 +9,7 @@ import PresentationForm from './PresentationForm';
 import MainPage from './MainPage';
 import ListConferences from './ListConferences';
 import ListLocations from './ListLocations';
+import ListPresentations from './ListPresentations';
 
 
 class App extends React.Component {
@@ -82,6 +83,7 @@ class App extends React.Component {
           <Route path="/conferences" element={<ListConferences conferences = {this.state.conferences} /> } />
           <Route path="/locations" element={<ListLocations locations = {this.state.locations} /> } />
           <Route path="/attendees" element={<AttendeesList attendees = {this.state.attendees} /> } />
+          <Route path="/presentations" element={<ListPresentations presentations = {this.state.presentations} /> } />
         </Routes>
       </div>
     </BrowserRouter>

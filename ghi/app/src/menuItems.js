@@ -25,19 +25,19 @@ export const menuItems=[
             },
         ]
     },
-    {
-        title: "Presentations",
-        submenu: [
-            {
-                title: "New Presentation",
-                href: "/presentations/new",
-            },
-            {
-                title: "Presentations List",
-                href: "/presentations",
-            },
-        ]
-    },
+    // {
+    //     title: "Presentations",
+    //     submenu: [
+    //         {
+    //             title: "New Presentation",
+    //             href: "/presentations/new",
+    //         },
+    //         {
+    //             title: "Presentations List",
+    //             href: "/presentations",
+    //         },
+    //     ]
+    // },
     {
         title: "Attendees",
         submenu: [
