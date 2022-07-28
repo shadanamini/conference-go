@@ -1,3 +1,4 @@
+from time import time
 from django.db import models
 from django.urls import reverse
 
@@ -61,8 +62,8 @@ class Conference(models.Model):
     # Has a one-to-many relationship with attendees.Attendee
 
     name = models.CharField(max_length=200)
-    starts = models.DateField()
-    ends = models.DateField()
+    starts = models.DateTimeField()
+    ends = models.DateTimeField()
     description = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
