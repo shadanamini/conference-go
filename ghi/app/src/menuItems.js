@@ -34,7 +34,7 @@ export const menuItems=[
             },
             {
                 title: "Presentations List",
-                href: "/potential_customers/new",
+                href: "/presentations",
             },
         ]
     },

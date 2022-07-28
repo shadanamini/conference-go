@@ -14,9 +14,6 @@ import ListLocations from './ListLocations';
 
 
 function App(props) {
-  if(props.attendees === undefined){
-    return null;
-  }
   return (
     <BrowserRouter>
       <Nav />
