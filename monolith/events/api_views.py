@@ -7,9 +7,6 @@ from common.json import ModelEncoder
 from .acls import get_photo, get_weather_data
 from .models import Conference, Location, State
 
-class LocationNameEncoder(ModelEncoder):
-    model = Location
-    properties = ["name"]
 
 class LocationListEncoder(ModelEncoder):
     model = Location
