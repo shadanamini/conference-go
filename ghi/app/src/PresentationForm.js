@@ -102,8 +102,8 @@ class PresentationForm extends React.Component {
     return (
         <div className="row">
         <div className="offset-3 col-5 bg-white">
-        {/* <style>{"body { background-color: #0dcaf0; }"}</style> */}
-          <div className="p-4 mt-4">
+          <div className="shadow p-4 mt-4">
+            {/* <style>{"body { background-color: #0dcaf0; }"}</style> */}
           <div class="col-md-12 text-center">
             <h1>Create New Presentation</h1>
           </div>

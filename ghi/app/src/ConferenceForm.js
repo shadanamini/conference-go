@@ -163,7 +163,7 @@ class ConferenceForm extends React.Component {
                     </select>
                   </div>
                     <div class="col-md-12 text-center">
-                        <button className="btn btn-primary">Create!</button>
+                    <button className="btn btn-primary">Create!</button>
                     </div>
                 </form>
               </div>
