@@ -91,8 +91,8 @@ class MainPage extends React.Component {
 
   render() {
     return (
-      <div className="my-5 container">
-        <div className="px-4 py-5 my-5 mt-0 text-center bg-white">
+      <>
+        <div className="px-4 py-5 my-5 mt-0 text-center bg-info">
           <img className="bg-white rounded shadow d-block mx-auto mb-4" src="/logo.svg" alt="" width="600" />
           <h1 className="display-5 fw-bold">Conference GO!</h1>
           <div className="col-lg-6 mx-auto">
@@ -105,8 +105,8 @@ class MainPage extends React.Component {
             </div>
           </div>
         </div>
-        {/* <div className="container">
-          <h2>Upcoming Conferences</h2>
+        <div className="container">
+          <h2>Conferences</h2>
           <div className="row">
             {this.state.conferenceColumns.map((conferenceList, index) => {
               return (
@@ -114,8 +114,8 @@ class MainPage extends React.Component {
               );
             })}
           </div>
-        </div> */}
-      </div>
+        </div>
+      </>
     );
   }
 }

@@ -1,25 +1,44 @@
-import { NavLink } from 'react-router-dom';
-import { menuItems } from './menuItems';
-import MenuItems from './MenuItem'
-
+import { NavLink } from "react-router-dom"
 function Nav() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-info">
+
+    return (
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/">Conference GO!</NavLink>
+        <NavLink className="navbar-brand" to="">Conference GO!</NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="menus">
-          {menuItems.map((menu, index) => {
-            return <MenuItems items={menu} key={index} />
-          })}
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            {/* <li className="nav-item">
+              <NavLink className="nav-link active" aria-current="page" to="http://localhost:3000/index.html">Home</NavLink>
+            </li> */}
+            {/* <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="">3001 Home</NavLink>
+            </li> */}
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="locations/new">New Location</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="conferences/new">New Conference</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="presentations/new">New Presentation</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="attendees">Attendees List</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link d-none" aria-current="page" to="attendees/new">Attend Conference</NavLink>
+            </li>
           </ul>
+          <form className="d-flex">
+            <NavLink className="btn btn-primary" to="attendees/new">Attend!</NavLink>
+          </form>
         </div>
       </div>
     </nav>
-  )
+    );
 }
 
-export default Nav;
+export default Nav; 

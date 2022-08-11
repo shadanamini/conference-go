@@ -10,7 +10,7 @@ from .models import Conference, Location, State
 
 class LocationListEncoder(ModelEncoder):
     model = Location
-    properties = ["name", "room_count", "city", "picture_url", "id", "created"]
+    properties = ["name", "picture_url", "id"]
 
     def get_extra_data(self, o):
         return {"state": o.state.abbreviation} 
